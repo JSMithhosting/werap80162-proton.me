@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NourishSA Foundation</title>
+
+<meta name="description" content="NourishSA Foundation promotes food security, nutrition, food rescue, education and sustainable community development in South Africa.">
+
+<style>
+:root{
+    --green:#0f4c36;
+    --dark:#082f22;
+    --gold:#d8a33b;
+    --cream:#f8f4ea;
+    --light:#edf3ed;
+    --white:#ffffff;
+    --text:#1e3028;
+    --grey:#68766f;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    line-height:1.6;
+    background:white;
+}
+
+h1,h2,h3{
+    font-family:Georgia,"Times New Roman",serif;
+    margin-top:0;
+}
+
+h1{
+    font-size:clamp(44px,7vw,76px);
+    line-height:1.03;
+    margin-bottom:25px;
+}
+
+h2{
+    font-size:clamp(32px,5vw,50px);
+    line-height:1.1;
+}
+
+h3{
+    font-size:24px;
+}
+
+a{
+    color:inherit;
+}
+
+.container{
+    width:min(1160px,90%);
+    margin:auto;
+}
+
+.section{
+    padding:90px 0;
+}
+
+.eyebrow{
+    display:block;
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.button{
+    display:inline-block;
+    background:var(--green);
+    color:white;
+    text-decoration:none;
+    padding:14px 25px;
+    border-radius:8px;
+    font-weight:bold;
+    margin:6px 8px 6px 0;
+}
+
+.button-outline{
+    background:transparent;
+    border:2px solid var(--green);
+    color:var(--green);
+    padding:12px 23px;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:white;
+    border-bottom:1px solid #e4e4e4;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav-container{
+    width:min(1160px,90%);
+    margin:auto;
+    min-height:72px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.brand{
+    font-family:Georgia,serif;
+    font-size:25px;
+    font-weight:bold;
+    color:var(--green);
+    text-decoration:none;
+}
+
+.brand span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+/* HERO */
+
+.hero{
+    padding:85px 0;
+    background:
+    radial-gradient(
+        circle at 90% 10%,
+        rgba(216,163,59,.20),
+        transparent 28%
+    ),
+    linear-gradient(135deg,#faf7ef,#f0eadb);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:55px;
+    align-items:center;
+}
+
+.hero p{
+    font-size:19px;
+    color:var(--grey);
+    max-width:680px;
+}
+
+.hero-buttons{
+    margin:28px 0 38px;
+}
+
+/* LOGO */
+
+.logo-card{
+    background:white;
+    min-height:420px;
+    border-radius:28px;
+    padding:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 20px 60px rgba(15,76,54,.10);
+    border:1px solid rgba(15,76,54,.10);
+}
+
+.logo-card img{
+    width:100%;
+    max-width:410px;
+    max-height:340px;
+    object-fit:contain;
+}
+
+/* PILLARS */
+
+.pillars{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.pillar{
+    border-top:1px solid rgba(15,76,54,.2);
+    padding-top:12px;
+}
+
+.pillar strong{
+    display:block;
+    color:var(--green);
+}
+
+.pillar small{
+    color:var(--grey);
+}
+
+/* ABOUT */
+
+.about{
+    background:var(--cream);
+}
+
+.two-column{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:65px;
+}
+
+.about-text{
+    font-size:19px;
+    color:var(--grey);
+}
+
+.registration{
+    background:white;
+    border-left:4px solid var(--gold);
+    padding:20px 23px;
+    margin-top:22px;
+    border-radius:6px;
+    color:var(--text);
+}
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:50px;
+}
+
+.card{
+    background:white;
+    border:1px solid rgba(15,76,54,.12);
+    border-radius:16px;
+    padding:28px;
+}
+
+.number{
+    color:var(--gold);
+    font-weight:bold;
+    font-size:12px;
+}
+
+/* PROGRAMMES */
+
+.programmes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.programme{
+    border:1px solid rgba(15,76,54,.14);
+    padding:30px;
+    border-radius:16px;
+    min-height:240px;
+}
+
+.programme p{
+    color:var(--grey);
+}
+
+.programme-feature{
+    background:var(--light);
+}
+
+/* IMPACT */
+
+.impact{
+    background:var(--dark);
+    color:white;
+}
+
+.impact .eyebrow{
+    color:#c8ddcc;
+}
+
+.impact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border:1px solid rgba(255,255,255,.15);
+    margin-top:35px;
+}
+
+.impact-item{
+    padding:28px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.impact-item strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:22px;
+}
+
+.impact-item span{
+    opacity:.72;
+}
+
+/* PARTNERSHIPS */
+
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-top:35px;
+}
+
+.partner-card{
+    padding:35px;
+    border:1px solid rgba(15,76,54,.14);
+    border-radius:18px;
+    background:var(--cream);
+}
+
+.partner-card h3{
+    color:var(--green);
+}
+
+.partner-card p{
+    color:var(--grey);
+}
+
+.partnership-note{
+    margin-top:28px;
+    padding:22px;
+    border-left:4px solid var(--gold);
+    background:#fff9ec;
+}
+
+/* GET INVOLVED */
+
+.involved{
+    background:var(--cream);
+}
+
+.involved-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+/* SUPPORT */
+
+.support{
+    background:var(--green);
+    color:white;
+}
+
+.support .eyebrow{
+    color:#d7e5d9;
+}
+
+.support-grid{
+    display:grid;
+    grid-template-columns:1fr .85fr;
+    gap:55px;
+    align-items:center;
+}
+
+.support-box{
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.20);
+    border-radius:20px;
+    padding:32px;
+}
+
+.support-box a{
+    color:white;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:60px;
+}
+
+.contact-row{
+    padding:17px 0;
+    border-bottom:1px solid rgba(15,76,54,.14);
+}
+
+.contact-row small{
+    display:block;
+    text-transform:uppercase;
+    letter-spacing:1.4px;
+    color:var(--grey);
+}
+
+.contact-row a{
+    color:var(--green);
+}
+
+.contact-box{
+    background:var(--cream);
+    border-radius:20px;
+    padding:35px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#08251b;
+    color:white;
+    padding:50px 0;
+    text-align:center;
+}
+
+.footer-name{
+    font-family:Georgia,serif;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.footer-name span{
+    color:var(--gold);
+}
+
+footer p{
+    opacity:.8;
+}
+
+footer a{
+    color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero-grid,
+    .two-column,
+    .support-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .values,
+    .programmes,
+    .impact-grid,
+    .involved-grid,
+    .partner-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .nav-container{
+        flex-direction:column;
+        padding:15px 0;
+    }
+
+    .nav-links{
+        justify-content:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .section,
+    .hero{
+        padding:60px 0;
+    }
+
+    .pillars,
+    .values,
+    .programmes,
+    .impact-grid,
+    .involved-grid,
+    .partner-grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo-card{
+        min-height:300px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="nav-container">
+
+<a href="#home" class="brand">
+Nourish<span>SA</span>
+</a>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#programmes">Programmes</a>
+<a href="#impact">Impact</a>
+<a href="#partnerships">Partnerships</a>
+<a href="#involved">Get Involved</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<span class="eyebrow">
+Food Security • Nutrition • Community
+</span>
+
+<h1>
+Healthy food today.<br>
+Stronger communities tomorrow.
+</h1>
+
+<p>
+NourishSA Foundation works to improve food security,
+nutrition and community wellbeing through nutritious
+food assistance, food rescue, education and sustainable
+food-growing initiatives.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#support" class="button">
+Support Our Work
+</a>
+
+<a href="#programmes" class="button button-outline">
+Explore Programmes
+</a>
+
+</div>
+
+
+<div class="pillars">
+
+<div class="pillar">
+<strong>FEED</strong>
+<small>Immediate support</small>
+</div>
+
+<div class="pillar">
+<strong>EDUCATE</strong>
+<small>Nutrition knowledge</small>
+</div>
+
+<div class="pillar">
+<strong>GROW</strong>
+<small>Food production</small>
+</div>
+
+<div class="pillar">
+<strong>SUSTAIN</strong>
+<small>Community resilience</small>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="logo-card">
+
+<!--
+Later we will upload your real logo
+and call it logo.png
+-->
+
+<img src="logo.jpg"
+alt="NourishSA Foundation Logo">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+
+<div class="container">
+
+<div class="two-column">
+
+<div>
+
+<span class="eyebrow">
+About NourishSA
+</span>
+
+<h2>
+More than food parcels.
+</h2>
+
+</div>
+
+
+<div class="about-text">
+
+<p>
+NourishSA Foundation aims to provide nutritious food
+today while helping communities become healthier and
+more food-secure tomorrow.
+</p>
+
+<p>
+We combine food assistance with practical nutrition
+education, food rescue, school and child support and
+community-based food-growing initiatives.
+</p>
+
+<div class="registration">
+
+<strong>
+Registered South African Non-Profit Organisation
+</strong>
+
+<br>
+
+Registration Number:
+<strong>439-518 NPO</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="values">
+
+<div class="card">
+<span class="number">01</span>
+<h3>Dignity</h3>
+<p>
+Every person receiving support deserves respectful
+and humane treatment.
+</p>
+</div>
+
+<div class="card">
+<span class="number">02</span>
+<h3>Nutrition</h3>
+<p>
+Food assistance should focus on nutritional value
+and not simply quantity.
+</p>
+</div>
+
+<div class="card">
+<span class="number">03</span>
+<h3>Accountability</h3>
+<p>
+Resources should be managed responsibly,
+ethically and transparently.
+</p>
+</div>
+
+<div class="card">
+<span class="number">04</span>
+<h3>Sustainability</h3>
+<p>
+Long-term food security requires education,
+partnerships and community food production.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROGRAMMES -->
+
+<section class="section" id="programmes">
+
+<div class="container">
+
+<span class="eyebrow">
+Our Programmes
+</span>
+
+<h2>
+Five practical ways we strengthen food health.
+</h2>
+
+<div class="programmes">
+
+<div class="programme programme-feature">
+<span class="number">01</span>
+<h3>NourishBox</h3>
+<p>
+Nutritious food parcels developed around household
+needs and improved nutritional balance.
+</p>
+</div>
+
+<div class="programme">
+<span class="number">02</span>
+<h3>NourishKids</h3>
+<p>
+School meals, healthy snacks, weekend food packs,
+nutrition education and support for vulnerable
+children and families.
+</p>
+</div>
+
+<div class="programme">
+<span class="number">03</span>
+<h3>NourishGarden</h3>
+<p>
+Community, school and household vegetable gardens
+supported by practical growing, composting and
+sustainability education.
+</p>
+</div>
+
+<div class="programme">
+<span class="number">04</span>
+<h3>NourishRescue</h3>
+<p>
+Responsible recovery and redistribution of suitable
+surplus food from farmers, retailers, restaurants,
+wholesalers and food-sector partners.
+</p>
+</div>
+
+<div class="programme">
+<span class="number">05</span>
+<h3>NourishSmart</h3>
+<p>
+Practical nutrition education covering healthy meals,
+food hygiene, food labels, meal planning and
+household food budgeting.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IMPACT -->
+
+<section class="section impact" id="impact">
+
+<div class="container">
+
+<span class="eyebrow">
+Measuring Our Impact
+</span>
+
+<h2>
+Success is not only the number of meals distributed.
+</h2>
+
+<div class="impact-grid">
+
+<div class="impact-item">
+<strong>Food Security</strong>
+<span>Households and individuals supported</span>
+</div>
+
+<div class="impact-item">
+<strong>Child Nutrition</strong>
+<span>Children and schools reached</span>
+</div>
+
+<div class="impact-item">
+<strong>Food Rescue</strong>
+<span>Surplus food recovered and redistributed</span>
+</div>
+
+<div class="impact-item">
+<strong>Community Growth</strong>
+<span>Gardens established and households trained</span>
+</div>
+
+<div class="impact-item">
+<strong>Education</strong>
+<span>Nutrition workshops and participants reached</span>
+</div>
+
+<div class="impact-item">
+<strong>Partnerships</strong>
+<span>Businesses and organisations supporting our mission</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PARTNERSHIPS -->
+
+<section class="section" id="partnerships">
+
+<div class="container">
+
+<span class="eyebrow">
+Partnership & Funding Vision
+</span>
+
+<h2>
+Building strong humanitarian and development partnerships.
+</h2>
+
+<p class="about-text">
+NourishSA Foundation seeks to work with businesses,
+humanitarian organisations, development agencies,
+community structures and international funders whose
+objectives align with food security, nutrition and
+sustainable community development.
+</p>
+
+<div class="partner-grid">
+
+<div class="partner-card">
+
+<h3>Humanitarian Benchmark</h3>
+
+<p>
+The work of organisations such as
+<strong>Gift of the Givers Foundation</strong>
+provides an important South African benchmark in
+humanitarian relief, emergency assistance and
+community-based support.
+</p>
+
+<p>
+NourishSA aims to build operational standards
+reflecting dignity, responsiveness and community service.
+</p>
+
+</div>
+
+
+<div class="partner-card">
+
+<h3>International Development Funding</h3>
+
+<p>
+NourishSA recognises international development agencies
+such as the
+<strong>
+Swedish International Development Cooperation Agency (Sida)
+</strong>
+as examples of institutions active in sustainable
+development and international cooperation.
+</p>
+
+<p>
+Future funding initiatives may seek support from
+suitable international development programmes,
+foundations and grant-making institutions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="partnership-note">
+
+<strong>Partnership Notice:</strong>
+
+References to Gift of the Givers Foundation and Sida
+describe organisations whose humanitarian and development
+work informs NourishSA's partnership and funding aspirations.
+These references do not imply an existing endorsement,
+sponsorship, funding agreement or formal partnership unless
+separately confirmed.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GET INVOLVED -->
+
+<section class="section involved" id="involved">
+
+<div class="container">
+
+<span class="eyebrow">
+Get Involved
+</span>
+
+<h2>
+There is more than one way to help.
+</h2>
+
+<div class="involved-grid">
+
+<div class="card">
+
+<h3>Support</h3>
+
+<p>
+Help support food parcels, children's nutrition,
+community gardens and food-health education.
+</p>
+
+<a href="#contact" class="button">
+Support NourishSA
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Volunteer</h3>
+
+<p>
+Assist with food packing, distribution,
+community gardens, events and programme activities.
+</p>
+
+<a href="#contact" class="button button-outline">
+Volunteer
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>Become a Partner</h3>
+
+<p>
+Businesses and organisations can contribute food,
+funding, transport, expertise or programme support.
+</p>
+
+<a href="#contact" class="button button-outline">
+Partner With Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="section support" id="support">
+
+<div class="container support-grid">
+
+<div>
+
+<span class="eyebrow">
+Support NourishSA
+</span>
+
+<h2>
+Help move communities from food relief toward food security.
+</h2>
+
+<p>
+Support can strengthen nutritious food assistance,
+children's programmes, community gardens, nutrition
+education and responsible food-rescue initiatives.
+</p>
+
+<a href="#contact" class="button">
+Contact NourishSA
+</a>
+
+</div>
+
+
+<div class="support-box">
+
+<h3>
+Support the Mission
+</h3>
+
+<p>
+Individuals, businesses and organisations can support
+NourishSA through food donations, programme sponsorship,
+volunteering, transport, expertise and community partnerships.
+</p>
+
+<p>
+<strong>Website</strong>
+<br>
+<a href="https://www.nourishsas.com/">
+www.nourishsas.com
+</a>
+</p>
+
+<p>
+<strong>Telephone</strong>
+<br>
+076 923 9095
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<span class="eyebrow">
+Contact NourishSA
+</span>
+
+<h2>
+Help us build healthier communities.
+</h2>
+
+<p>
+Contact NourishSA Foundation regarding food assistance,
+donations, volunteering, corporate partnerships,
+community programmes and food-rescue opportunities.
+</p>
+
+
+<div class="contact-row">
+<small>Telephone</small>
+<strong>076 923 9095</strong>
+</div>
+
+
+<div class="contact-row">
+<small>Website</small>
+<strong>
+<a href="https://www.nourishsas.com/">
+www.nourishsas.com
+</a>
+</strong>
+</div>
+
+
+<div class="contact-row">
+<small>Location</small>
+<strong>Gauteng, South Africa</strong>
+</div>
+
+
+<div class="contact-row">
+<small>NPO Registration</small>
+<strong>439-518 NPO</strong>
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+Work With Us
+</h3>
+
+<p>
+Contact NourishSA if you would like to:
+</p>
+
+<ul>
+<li>Provide food or other resources</li>
+<li>Support one of our programmes</li>
+<li>Volunteer</li>
+<li>Become a corporate partner</li>
+<li>Support a community project</li>
+<li>Discuss development funding</li>
+<li>Refer a beneficiary or community need</li>
+</ul>
+
+<p>
+<strong>Telephone</strong>
+<br>
+076 923 9095
+</p>
+
+<p>
+<strong>Website</strong>
+<br>
+<a href="https://www.nourishsas.com/">
+www.nourishsas.com
+</a>
+</p>
+
+<p>
+<strong>NPO Registration</strong>
+<br>
+439-518 NPO
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-name">
+Nourish<span>SA</span>
+</div>
+
+<strong>
+FOUNDATION
+</strong>
+
+<p>
+Healthy Food. Healthy People. Stronger Communities.
+</p>
+
+<p>
+FEED • EDUCATE • GROW • SUSTAIN
+</p>
+
+<p>
+Gauteng, South Africa
+<br>
+076 923 9095
+<br>
+
+<a href="https://www.nourishsas.com/">
+www.nourishsas.com
+</a>
+
+</p>
+
+<p>
+<strong>
+NPO Registration: 439-518 NPO
+</strong>
+</p>
+
+<p>
+© 2026 NourishSA Foundation
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
